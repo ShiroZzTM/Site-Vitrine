@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noa Delcommène | Cybersecurity Junior</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Three.js 3D Background -->
+<canvas id="webgl-canvas"></canvas>
+
+<!-- Cursor follower -->
+<div class="cursor-dot" data-cursor-dot></div>
+<div class="cursor-outline" data-cursor-outline></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <span class="logo-text">ND.</span>
+      <div class="logo-glow"></div>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#home" class="nav-link active">
+        <span class="nav-icon"><i class="fas fa-home"></i></span>
+        <span class="nav-text">Accueil</span>
+        <span class="nav-indicator"></span>
+      </a></li>
+      <li><a href="#about" class="nav-link">
+        <span class="nav-icon"><i class="fas fa-user"></i></span>
+        <span class="nav-text">À propos</span>
+        <span class="nav-indicator"></span>
+      </a></li>
+      <li><a href="#experience" class="nav-link">
+        <span class="nav-icon"><i class="fas fa-graduation-cap"></i></span>
+        <span class="nav-text">Formations</span>
+        <span class="nav-indicator"></span>
+      </a></li>
+      <li><a href="#skills" class="nav-link">
+        <span class="nav-icon"><i class="fas fa-code"></i></span>
+        <span class="nav-text">Compétences</span>
+        <span class="nav-indicator"></span>
+      </a></li>
+      <li><a href="#projects" class="nav-link">
+        <span class="nav-icon"><i class="fas fa-project-diagram"></i></span>
+        <span class="nav-text">Projets</span>
+        <span class="nav-indicator"></span>
+      </a></li>
+      <li><a href="#contact" class="nav-link">
+        <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+        <span class="nav-text">Contact</span>
+        <span class="nav-indicator"></span>
+      </a></li>
+    </ul>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-text">Cybersecurity Enthusiast</span>
+    </div>
+
+    <h1 class="hero-title">Noa Delcommène</h1>
+
+    <div class="hero-subtitle">
+      <span class="gradient-text typing-text"></span>
+      <span class="typing-cursor">|</span>
+    </div>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">
+        <span>Me contacter</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#about" class="btn-secondary">
+        <span>En savoir plus</span>
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://linkedin.com/in/noa-delcommene" target="_blank" class="social-icon" data-tooltip="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/ShiroZzTM" target="_blank" class="social-icon" data-tooltip="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:n.delcommène@student.helmo.be" class="social-icon" data-tooltip="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-bar-indicator">
+    <div class="scroll-bar-line">
+      <div class="scroll-bar-progress"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- About Section -->
+<section id="about" class="about section-padding">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">QUI SUIS-JE</span>
+      <h2 class="section-title">À propos de moi</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-content">
+        <p class="lead-text">
+          Étudiant passionné en <span class="highlight">cybersécurité</span> à HELMo,
+          je transforme ma curiosité technologique en expertise pratique.
+        </p>
+        <p class="body-text">
+          Depuis mon plus jeune âge, la technologie m'a fasciné. Mon parcours académique
+          couronné de succès et mon expérience professionnelle chez DPSYS et au CHC m'ont
+          permis de développer une solide expertise en informatique et en sécurité réseau.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h4 class="info-title">LOCALISATION</h4>
+              <p class="info-text">Liège, Belgique</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="info-content">
+              <h4 class="info-title">STATUT</h4>
+              <p class="info-text">Étudiant en 3e année de Cybersécurité à HELMo</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <div class="profile-card">
+          <div class="card-background"></div>
+          <div class="card-shine"></div>
+          <div class="profile-avatar">
+            <i class="fas fa-user-shield"></i>
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring-2"></div>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">Noa Delcommène</h3>
+            <p class="profile-role">Cybersecurity Enthusiast</p>
+            <div class="profile-status">
+              <span class="status-dot"></span>
+              <span class="status-text">Disponible pour opportunités</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience section-padding">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">PARCOURS</span>
+      <h2 class="section-title">Mon parcours</h2>
+    </div>
+
+    <div class="experience-tabs">
+      <button class="tab-btn active" data-tab="professionnel">
+        <i class="fas fa-briefcase"></i>
+        Parcours Professionnel
+      </button>
+      <button class="tab-btn" data-tab="academique">
+        <i class="fas fa-graduation-cap"></i>
+        Parcours Académique
+      </button>
+    </div>
+
+    <!-- Parcours Professionnel -->
+    <div class="timeline-container active" data-content="professionnel">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-outer"></div>
+            <div class="marker-inner"></div>
+            <div class="marker-icon">
+              <i class="fas fa-hospital"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">Août 2025</span>
+            <h3 class="timeline-title">Centre Hospitalier Chrétien (CHC)</h3>
+            <h4 class="timeline-role">Étudiant</h4>
+            <p class="timeline-description">Remplacement borne wifi • Gestion de licence • Citrix</p>
+            <div class="timeline-tags">
+              <span class="tag">Réseau</span>
+              <span class="tag">Licences</span>
+              <span class="tag">Citrix</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-outer"></div>
+            <div class="marker-inner"></div>
+            <div class="marker-icon">
+              <i class="fas fa-hospital"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">Juillet 2024</span>
+            <h3 class="timeline-title">Centre Hospitalier Chrétien (CHC)</h3>
+            <h4 class="timeline-role">Étudiant</h4>
+            <p class="timeline-description">Configuration chariots médicaux • Monitoring • Helpdesk</p>
+            <div class="timeline-tags">
+              <span class="tag">Helpdesk</span>
+              <span class="tag">Monitoring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-outer"></div>
+            <div class="marker-inner"></div>
+            <div class="marker-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">Octobre 2023 - Présent</span>
+            <h3 class="timeline-title">Delcommène Pascal Système (DPSYS)</h3>
+            <h4 class="timeline-role">Stagiaire IT</h4>
+            <p class="timeline-description">Assistance technique • Configuration firewall, VLAN, caméras • Dépannage systèmes</p>
+            <div class="timeline-tags">
+              <span class="tag">Firewall</span>
+              <span class="tag">Réseau</span>
+              <span class="tag">Support IT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parcours Académique -->
+    <div class="timeline-container" data-content="academique">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker education">
+            <div class="marker-outer"></div>
+            <div class="marker-inner"></div>
+            <div class="marker-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 - 2026</span>
+            <h3 class="timeline-title">Haute École Libre Mosane (HELMo)</h3>
+            <h4 class="timeline-role">Bachelier en Cybersécurité</h4>
+            <p class="timeline-description">Réussite exemplaire du Q1 • Formation avancée en sécurité informatique</p>
+            <div class="timeline-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Réseaux</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Wireshark</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker education">
+            <div class="marker-outer"></div>
+            <div class="marker-inner"></div>
+            <div class="marker-icon">
+              <i class="fas fa-school"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">2016 - 2023</span>
+            <h3 class="timeline-title">Collège Saint-Hadelin Visé (CSH)</h3>
+            <h4 class="timeline-role">Enseignement Secondaire</h4>
+            <p class="timeline-description">CES obtenu • Prix des rhétos en histoire</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills section-padding">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">EXPERTISE</span>
+      <h2 class="section-title">Compétences & Expertise</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3 class="category-title">
+          <i class="fas fa-code"></i>
+          <span>Compétences Techniques</span>
+        </h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Python</span>
+              <span class="skill-percentage"></span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">HTML, CSS & PHP</span>
+              <span class="skill-percentage"></span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Réseau & Sécurité</span>
+              <span class="skill-percentage"></span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">SQL & Mongo DB</span>
+              <span class="skill-percentage"></span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="87"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Pentesting</span>
+              <span class="skill-percentage"></span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="65"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="category-title">
+          <i class="fas fa-language"></i>
+          <span>Langues</span>
+        </h3>
+        <div class="language-list">
+          <div class="language-item">
+            <div class="language-header">
+              <span class="language-name">Français</span>
+              <span class="language-level">Natif</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="100"></div>
+            </div>
+          </div>
+          <div class="language-item">
+            <div class="language-header">
+              <span class="language-name">Anglais</span>
+              <span class="language-level">Avancé</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+          </div>
+          <div class="language-item">
+            <div class="language-header">
+              <span class="language-name">Néerlandais</span>
+              <span class="language-level">Intermédiaire</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="60"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qualities-section">
+      <h3 class="category-title">
+        <i class="fas fa-star"></i>
+        <span>Qualités Professionnelles</span>
+      </h3>
+      <div class="qualities-grid-split">
+        <div class="qualities-column">
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h4 class="quality-name">Rigoureux</h4>
+            <p class="quality-description">Attention méticuleuse aux détails et respect des procédures</p>
+          </div>
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4 class="quality-name">Responsable</h4>
+            <p class="quality-description">Prise d'initiatives et engagement dans les projets</p>
+          </div>
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h4 class="quality-name">Ponctuel</h4>
+            <p class="quality-description">Respect des délais et gestion efficace du temps</p>
+          </div>
+        </div>
+        <div class="qualities-column">
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h4 class="quality-name">Patient</h4>
+            <p class="quality-description">Capacité d'écoute et d'accompagnement bienveillant</p>
+          </div>
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <h4 class="quality-name">Organisé</h4>
+            <p class="quality-description">Planification stratégique et optimisation des processus</p>
+          </div>
+          <div class="quality-card">
+            <div class="quality-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h4 class="quality-name">Empathique</h4>
+            <p class="quality-description">Compréhension des besoins et collaboration harmonieuse</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects section-padding">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">RÉALISATIONS</span>
+      <h2 class="section-title">Mes Projets</h2>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-background"></div>
+        <div class="project-content">
+          <div class="project-icon">
+            <i class="fas fa-user-secret"></i>
+          </div>
+          <h3 class="project-title">Ransomware éducatif</h3>
+          <p class="project-description">
+            Proof of Concept éducatif d'un ransomware en Python avec architecture distribuée en trois tiers.
+            Développement d'un client de chiffrement, d'un serveur frontal de communication via sockets TCP
+            et d'un serveur de gestion de clés sécurisé. Projet de formation en sécurité offensive pour
+            comprendre les mécanismes d'attaque et développer des défenses efficaces.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Architecture 3-Tier</span>
+            <span class="tag">Socket TCP</span>
+            <span class="tag">PoC Éducatif</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card featured">
+        <div class="project-background"></div>
+        <div class="featured-badge">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="project-content">
+          <div class="project-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="project-title">Implémentation AES en Python</h3>
+          <p class="project-description">
+            Développement from scratch de l'algorithme AES en Python avec support complet des clés 128, 192 et 256 bits.
+            Implémentation des modes de chiffrement CBC, ECB et PCBC incluant la gestion du padding et des vecteurs d'initialisation.
+            Projet cryptographique réalisé avec les transformations SubBytes, ShiftRows, MixColumns et AddRoundKey.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">AES-128/192/256</span>
+            <span class="tag">CBC</span>
+            <span class="tag">ECB</span>
+            <span class="tag">PCBC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-background"></div>
+        <div class="project-content">
+          <div class="project-icon">
+            <i class="fas fa-flag"></i>
+          </div>
+          <h3 class="project-title">Cyber Security Challenge Belgium</h3>
+          <p class="project-description">Participation au CTF organisée par CSCBE </p>
+          <div class="project-tags">
+            <span class="tag">CTF</span>
+            <span class="tag">Competition</span>
+            <span class="tag">Hacking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <div class="project-icon">
+            <i class="fas fa-fingerprint"></i>
+          </div>
+          <h3 class="project-title">Reconnaissance d'Empreintes</h3>
+          <p class="project-description">
+            Système de reconnaissance biométrique d'empreintes digitales en Python avec extraction de
+            caractéristiques ORB et correspondance par distance de Hamming. Capable de comparer deux
+            empreintes et d'établir un score de similarité avec visualisation des correspondances.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">ORB</span>
+            <span class="tag">Pattern Matching</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-background"></div>
+        <div class="project-content">
+          <div class="project-icon">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <h3 class="project-title">Reconnaissance Faciale</h3>
+          <p class="project-description">
+            Système complet de reconnaissance faciale en Python avec détection multi-fonctionnelle.
+            Implémentation de cascades de Haar pour la détection de visages, yeux et sourires,
+            et entraînement de modèles personnalisés pour identification d'individus spécifiques.
+            Architecture modulaire avec datasets, entraînement et reconnaissance en temps réel.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Haar Cascade</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Face Recognition</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact section-padding">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">CONTACT</span>
+      <h2 class="section-title">Restons en contact</h2>
+    </div>
+
+    <p class="contact-intro">
+      Vous avez un projet, une opportunité ou simplement envie d'échanger ?
+      N'hésitez pas à me contacter !
+    </p>
+
+    <div class="contact-grid">
+      <a href="mailto:n.delcommène@student.helmo.be" class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h4 class="contact-title">Email</h4>
+        <p class="contact-info">n.delcommène@student.helmo.be</p>
+        <div class="card-glow"></div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/noa-delcommene" target="_blank" class="contact-card">
+        <div class="card-glow"></div>
+        <div class="contact-icon">
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <h3 class="contact-title">LinkedIn</h3>
+        <p class="contact-info">Connectons-nous professionnellement</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p class="footer-text">&copy; 2025 Noa Delcommène | Designed with <i class="fas fa-heart"></i> by ShiroZzTM</p>
+    <div class="footer-social">
+      <a href="https://linkedin.com/in/noa-delcommene" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/ShiroZzTM" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:n.delcommène@student.helmo.be" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="script.js"></script>
+</body>
+</html>
