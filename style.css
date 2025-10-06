@@ -389,7 +389,7 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  transition: width 0.4s, height 0.4s;
 }
 
 .btn-primary:hover::before {
@@ -711,12 +711,24 @@ body {
   border-radius: 16px;
   padding: 20px;
   display: flex;
-  align-items: center;
+  align-items: start;  /* Alignement en haut */
   gap: 20px;
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
 }
+
+.info-card:first-child {
+  margin-left: 1px;  /* Ajustez la valeur selon vos besoins */
+}
+
+.info-card i {
+  font-size: 30px;
+  color: var(--primary-cyan);
+  min-width: 40px;
+  padding-top: 5px;  /* ← Ajoute un peu d'espace en haut de l'icône */
+}
+
 
 .info-card::before {
   content: '';
@@ -726,7 +738,7 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.1), transparent);
-  transition: left 0.6s;
+  transition: left 0.4s;
 }
 
 .info-card:hover::before {
@@ -784,20 +796,20 @@ body {
   inset: 0;
   background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(123, 47, 247, 0.1));
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .card-shine {
   position: absolute;
   inset: -100%;
   background: linear-gradient(
-    45deg,
-    transparent 40%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 60%
+          45deg,
+          transparent 40%,
+          rgba(255, 255, 255, 0.1) 50%,
+          transparent 60%
   );
   transform: translateX(-100%);
-  transition: transform 0.8s ease;
+  transition: transform 0.5s ease;
 }
 
 .profile-card:hover .card-background {
@@ -1148,7 +1160,7 @@ body {
   background: linear-gradient(90deg, var(--primary), var(--accent));
   border-radius: 10px;
   width: 0;
-  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px var(--primary);
   position: relative;
 }
@@ -1220,7 +1232,7 @@ body {
   border-radius: 16px;
   backdrop-filter: blur(10px);
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1238,7 +1250,7 @@ body {
   font-size: 2rem;
   color: var(--bg-primary);
   position: relative;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .quality-card:hover {
@@ -1280,7 +1292,7 @@ body {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-background {
@@ -1288,7 +1300,7 @@ body {
   inset: 0;
   background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), rgba(123, 47, 247, 0.05));
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .project-card:hover .project-background {
@@ -1342,7 +1354,7 @@ body {
   font-size: 2rem;
   color: var(--bg-primary);
   margin-bottom: 1.5rem;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .project-card:hover .project-icon {
@@ -1398,7 +1410,7 @@ body {
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-glow {
@@ -1406,7 +1418,7 @@ body {
   inset: 0;
   background: radial-gradient(circle at center, var(--primary) 0%, transparent 70%);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
   filter: blur(40px);
 }
 
@@ -1431,7 +1443,7 @@ body {
   border-radius: 50%;
   font-size: 2rem;
   color: var(--bg-primary);
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .contact-card:hover .contact-icon {
@@ -1548,7 +1560,7 @@ body {
     flex-direction: column;
     padding: 3rem;
     gap: 2rem;
-    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .nav-menu.active {
