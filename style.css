@@ -102,6 +102,7 @@ body {
 }
 
 /* ===== CURSOR PERSONNALISÉ ===== */
+/*
 .cursor-dot,
 .cursor-outline {
   width: 8px;
@@ -115,7 +116,7 @@ body {
   box-shadow: var(--glow-primary);
   transform: translate(-50%, -50%);
 }
-
+*/
 .cursor-outline {
   width: 40px;
   height: 40px;
