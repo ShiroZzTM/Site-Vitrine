@@ -116,7 +116,7 @@ body {
   box-shadow: var(--glow-primary);
   transform: translate(-50%, -50%);
 }
-*/
+
 .cursor-outline {
   width: 40px;
   height: 40px;
@@ -126,6 +126,7 @@ body {
   opacity: 0.5;
   transition: all 0.2s ease;
 }
+*/
 
 /* Désactiver le curseur personnalisé sur mobile/tablette */
 @media (max-width: 1024px) {
