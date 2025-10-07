@@ -8,9 +8,8 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copie uniquement ton site statique (évite d’embarquer des fichiers inutiles)
 # Assure-toi que ces chemins existent dans ton contexte docker (à côté du Dockerfile)
 COPY index.html /usr/share/nginx/html/
-COPY styles.css  /usr/share/nginx/html/
+COPY style.css  /usr/share/nginx/html/
 COPY script.js   /usr/share/nginx/html/
-COPY assets/     /usr/share/nginx/html/assets/
 
 # (Optionnel) expose le port
 EXPOSE 80
